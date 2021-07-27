@@ -75,7 +75,7 @@
 ```docker stop -t 0 $(docker ps -q)```
 
 - Inspecionar container:
-- 
+
 ```docker inspect CONTAINER_ID_OU_PARTE_DELE_OU_NAME_DO_CONTAINER```
 
 - Criação de VOLUMES:
