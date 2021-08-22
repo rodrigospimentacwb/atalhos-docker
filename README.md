@@ -4,6 +4,24 @@
 
 [Curso de Docker Alura](https://cursos.alura.com.br/course/docker-e-docker-compose)
 
+## Aplicações
+
+- Instalar docker
+
+  https://docs.docker.com/engine/install/ubuntu/
+  
+  https://docs.docker.com/engine/install/linux-postinstall/ (evitar docker pedir sudo)
+  
+  https://docs.docker.com/compose/install/
+
+- Dive (Analisar imagem docker)
+
+  https://github.com/wagoodman/dive
+  
+- Dock Station (Ferramenta visual para docker)
+
+  https://dockstation.io/
+
 ## Comandos
 
 - Rodando o Hello Word:
