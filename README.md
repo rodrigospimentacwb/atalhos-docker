@@ -136,5 +136,10 @@ inserir :
 $ systemctl start docker
 ```
 
+- Too many requests
 
+```
+rm ~/.docker/config.json
+docker login
+```
 
