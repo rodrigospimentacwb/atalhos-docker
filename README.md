@@ -52,6 +52,10 @@
 
 ```docker rmi REPOSITORY```
 
+- Remover todas as imagem:
+
+```docker rmi -f $(docker images -aq)```
+
 - Parar container (wait default de 10 segundos):
 
 ```docker stop CONTAINER_ID_OU_PARTE_DELE_OU_NAME_DO_CONTAINER```
@@ -59,6 +63,10 @@
 - Parar container diminuindo tempo de wait:
 
 ```docker stop -t 0 CONTAINER_ID_OU_PARTE_DELE_OU_NAME_DO_CONTAINER```
+
+- Parar todos os caontainers:
+
+```docker stop $(docker ps -q)```
 
 - Rodando imagem de static site (-d detached sem travar terminal, sem atribuir porta):
 
