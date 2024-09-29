@@ -129,6 +129,10 @@ Obs: mesmo matando o container, o volume no docker host/maquina local se mantem
 
 ```docker container logs --tail -n CONTAINER_ID_OU_PARTE_DELE_OU_NAME_DO_CONTAINER```
 
+- Ver todos os logs:
+  
+```docker container ls```
+
 - Mudar porta de uso do docker:
 
 ```
