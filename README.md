@@ -36,25 +36,9 @@
 
 ```docker ps -a```
 
-- Remover container um a um:
-
-```docker rm CONTAINER_ID_OU_PARTE_DELE_OU_NAME_DO_CONTAINER```
-
-- Remover todos containers inativos:
-
-```docker container prune```
-
 - Listar imagens:
  
 ```docker images```
-
-- Remover imagem:
-
-```docker rmi REPOSITORY```
-
-- Remover todas as imagem:
-
-```docker rmi -f $(docker images -aq)```
 
 - Parar container (wait default de 10 segundos):
 
@@ -67,6 +51,34 @@
 - Parar todos os caontainers:
 
 ```docker stop $(docker ps -q)```
+
+- Remover container um a um:
+
+```docker rm CONTAINER_ID_OU_PARTE_DELE_OU_NAME_DO_CONTAINER```
+
+- Remover todos containers inativos:
+
+```$ docker rm $(docker ps -aq)```
+
+- Remover imagem:
+
+```docker rmi REPOSITORY```
+
+- Remover todas as imagem:
+
+```docker rmi -f $(docker images -q)```
+
+- Remover todos os volumes:
+
+```docker volume prune -f```
+
+- Remover todas as networks:
+
+```docker network prune -f```
+
+- Remover todo cache de build:
+
+```docker builder prune -f```
 
 - Rodando imagem de static site (-d detached sem travar terminal, sem atribuir porta):
 
@@ -117,10 +129,6 @@ Obs: mesmo matando o container, o volume no docker host/maquina local se mantem
 
 ```docker run -it -v "/home/teste_ubuntu:/var/www" ubuntu```
 
-- Apagar tudo:
-
-```docker container prune --force && docker network prune --force && docker volume prune --force && docker ps && docker network ls && docker volume ls```
-
 - Ver processos do container:
 
 ```docker container top CONTAINER_ID_OU_PARTE_DELE_OU_NAME_DO_CONTAINER```
@@ -146,12 +154,5 @@ inserir :
   "default-address-pools":[{ "base":"192.168.2.5/24", "size":28 }]
 } 
 $ systemctl start docker
-```
-
-- Too many requests
-
-```
-rm ~/.docker/config.json
-docker login
 ```
 
